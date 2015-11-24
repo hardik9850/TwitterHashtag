@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".MainActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        android:id="@+id/include">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#F2380F"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+
+    <EditText
+        android:id="@+id/edt_hashtag_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:imeOptions="actionSearch"
+        android:inputType="text"
+        android:background="@color/colorPrimary"
+        android:textSize="19sp"
+        android:textColor="@android:color/white"
+        android:hint="@string/search_hint"
+        android:textColorHint="@android:color/white"
+        android:padding="16dp"
+        android:gravity="center_horizontal"
+        android:layout_below="@+id/include"
+    />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycle_search_results"
+        android:layout_below="@id/edt_hashtag_search"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</RelativeLayout>
+<!-- From: file:/D:/Android%20STUFF/Temp/TwitterHashTag/app/src/main/res/layout/activity_main.xml -->
